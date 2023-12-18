@@ -6,9 +6,11 @@ services:
     ports:
       - 28000:27017
   springboot-avec-mongodb-container-un:
-    image: inesblain/springboot-avec-mongodb:v3
+    image: guillaumelhg/springboot-avec-mongodb:v3
     container_name: springboot-avec-mongodb-container-un
     ports:
       - 8090:8083
     links:
-     - mongodb-container-un
+      - mongodb-container-un
+    extra_hosts:
+      - host.docker.internal:host-gateway

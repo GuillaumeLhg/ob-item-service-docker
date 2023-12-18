@@ -22,6 +22,10 @@ docker tag springboot-avec-mongodb:v1 inesblain/springboot-avec-mongodb:v1
 14. Execution du container SpringBoot avec lien vers le container de mongo db ->docker run -p 8090:8083 --name springboot-avec-mongodb-container-un --link mongodb-container-un:mongo --add-host=host.docker.internal:host-gateway -d inesblain/springboot-avec-mongodb:v1
 15. Voir les logs à "l'intérieur" du container SpringBoot -> docker logs <Nom-Du-Container-En-Cours-Exécution>
 16. Aller à l'intérieur d'un container -> docker exec -it <Nom-Du-Container-En-Cours-Exécution> bash
-17. Forcer l'arrêt et la suppression d'un container en cours d'exécution -> docker rm -f <Nom-Du-Container-En-Cours-Exécution>
-18. Docker compose nous permer de faire fonctionner une application multi-container très simplement avec une simple commande
-
+17. Accéder au shell MongoDB -> mongosh
+18. Dans le shell MongoDB, lister les bases de données -> show dbs
+19. Dans le shell MongoDB, accéder à une base de données -> use <DatabaseName>
+20. Dans le shell MongoDB, lister les collections -> show collections
+21. Dans le shell MongoDB, lister les items d'une collection -> db.<CollectionName>.find().pretty()
+22. Forcer l'arrêt et la suppression d'un container en cours d'exécution -> docker rm -f <Nom-Du-Container-En-Cours-Exécution>
+23. Docker compose nous permer de faire fonctionner une application multi-container très simplement avec une simple commande
